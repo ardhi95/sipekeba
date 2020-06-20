@@ -1,3 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sistem Pelaporan Kehilangan Barang</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="<?=base_url()?>Assets/Admin/bootstrap/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="<?=base_url()?>Assets/Admin/plugins/fa/css/font-awesome.css">
+  <!--Iconnya-->
+  <link rel="shortcut icon" href="<?php echo base_url('/Assets/Admin/dist/img/logo.ico');?>"/>
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="<?=base_url()?>Assets/Admin/plugins/ion/css/ionicons.css">
+  <!-- SweetAlert -->
+  <link rel="stylesheet" href="<?=base_url()?>Assets/Admin/plugins/sweet/sweetalert2.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="<?php echo base_url('Assets/Admin/plugins/datatables/dataTables.bootstrap.css');?>" type="text/css">
+  <link rel="stylesheet" href="<?php echo base_url('Assets/Admin/plugins/D_Table/jquery.dataTables.min.css');?>" type="text/css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="<?=base_url()?>Assets/Admin/dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="<?=base_url()?>Assets/Admin/dist/css/skins/_all-skins.min.css">
+  <!--Jquery-Confirm-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.css">
+
+  <style type="text/css">
+    td.highlight {
+      background-color: whitesmoke !important;
+    }
+    tfoot input {
+        width: 100%;
+        padding: 3px;
+        box-sizing: border-box;
+    }
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+      padding: 0px !important;
+      margin-left: 0px !important;
+    }
+  </style>
+
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
 <!--Iconnya-->
 <link rel="shortcut icon" href="<?php echo base_url('/Assets/Admin/dist/img/logo.ico');?>"/>
 <header class="main-header">
@@ -79,18 +126,18 @@
             <i class="fa fa-home" aria-hidden="true"></i> <span>Dashboard</span>
           </a>
         </li>
-        <!-- <li class="treeview active">
+        <li class="treeview">
           <a href="#">
-            <i class="fa fa-usd" aria-hidden="true"></i> <span>Data Saldo</span>
+            <i class="fa fa-users" aria-hidden="true"></i> <span>Admin</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="<?php if($this->uri->uri_string() == 'Saldo') { echo 'active'; } ?>"><a href="<?=base_url('Saldo')?>"><i class="fa fa-circle-o"></i> Saldo New</a></li>
-            <li class="<?php if($this->uri->uri_string() == 'Saldo/verified') { echo 'active'; } ?>"><a href="<?=base_url('Saldo/verified')?>"><i class="fa fa-circle-o"></i> <span> Saldo Terkirim</span></a></li>
+            <li class="<?php if($this->uri->uri_string() == 'Role Admin') { echo 'active'; } ?>"><a href="<?=base_url('AdminRole')?>"><i class="fa fa-circle-o"></i> Role Admin</a></li>
+            <li class="<?php if($this->uri->uri_string() == 'Admin') { echo 'active'; } ?>"><a href="<?=base_url('Admin')?>"><i class="fa fa-circle-o"></i> <span> Admin</span></a></li>
           </ul>
-        </li> -->
+        </li>
         
 
       </ul>

@@ -199,3 +199,67 @@
   <!-- Add the sidebar's background. This div must be placed
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
+    <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+       <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<script src="<?=base_url()?>Assets/Admin/plugins/jQuery/jquery-2.2.3.min.js"></script>
+<script src="<?=base_url()?>Assets/Admin/dist/js/jqueryUI.js"></script>
+<!-- Bootstrap 3.3.7 -->
+<script src="<?=base_url()?>Assets/Admin/bootstrap/js/bootstrap.min.js"></script>
+>
+<!-- SlimScroll -->
+<script src="<?=base_url()?>Assets/Admin/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="<?=base_url()?>Assets/Admin/plugins/fastclick/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="<?=base_url()?>Assets/Admin/dist/js/app.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="<?=base_url()?>Assets/Admin/dist/js/demo.js"></script>
+<!-- SweetAlert -->
+<script src="<?=base_url()?>Assets/Admin/plugins/sweet/sweetalert2.js"></script>
+<!-- DataTables -->
+<script src="<?=base_url()?>Assets/Admin/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="<?=base_url()?>Assets/Admin/plugins/datatables/dataTables.bootstrap.min.js"></script>
+<!--Jquery-Confirm-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.2.0/jquery-confirm.min.js"></script>
+
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-buttons/js/dataTables.buttons.min.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-buttons-bs/js/buttons.bootstrap.min.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-buttons/js/buttons.flash.min.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-buttons/js/buttons.html5.min.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-buttons/js/buttons.print.min.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-keytable/js/dataTables.keyTable.min.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-responsive/js/dataTables.responsive.min.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-responsive-bs/js/responsive.bootstrap.js');?>"></script>
+<script src="<?=base_url('/Assets/Admin/plugins/D_Table/datatables.net-scroller/js/dataTables.scroller.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/jszip/dist/jszip.min.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/pdfmake/build/pdfmake.min.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/pdfmake/build/vfs_fonts.js');?>"></script>
+<!-- page script -->
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('[data-toggle="tooltip"]').tooltip();
+    $('.navbar-nav [data-toggle="tooltip"]').tooltip();
+    $('.navbar-twitch-toggle').on('click', function(event) {
+        event.preventDefault();
+        $('.navbar-twitch').toggleClass('open');
+    });
+    $('.nav-style-toggle').on('click', function(event) {
+        event.preventDefault();
+        var current = $('.nav-style-toggle.disabled');
+        $(this).addClass('disabled');
+        current.removeClass('disabled');
+        $('.navbar-twitch').removeClass('navbar-'+current.data('type'));
+        $('.navbar-twitch').addClass('navbar-'+$(this).data('type'));
+    });
+  });
+</script>
+
+</body>
+</html>
