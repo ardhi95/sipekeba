@@ -236,13 +236,17 @@
 <script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-keytable/js/dataTables.keyTable.min.js');?>"></script>
 <script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-responsive/js/dataTables.responsive.min.js');?>"></script>
 <script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-responsive-bs/js/responsive.bootstrap.js');?>"></script>
-<script src="<?=base_url('/Assets/Admin/plugins/D_Table/datatables.net-scroller/js/dataTables.scroller.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/datatables.net-scroller/js/dataTables.scroller.js');?>"></script>
 <script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/jszip/dist/jszip.min.js');?>"></script>
 <script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/pdfmake/build/pdfmake.min.js');?>"></script>
 <script src="<?php echo base_url('/Assets/Admin/plugins/D_Table/pdfmake/build/vfs_fonts.js');?>"></script>
+<script src="<?php echo base_url('/Assets/Admin/plugins/alert/bootstrap-flash-alert.js');?>"></script>
 <!-- page script -->
 
 <script type="text/javascript">
+  function setmessage(title, message, type) {
+    $.alert(message, {title: title, type: type, position: ['top-right', [-0.42, 0]],});
+  }
   $(document).ready(function() {
     $('[data-toggle="tooltip"]').tooltip();
     $('.navbar-nav [data-toggle="tooltip"]').tooltip();
