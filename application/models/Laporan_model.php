@@ -1,12 +1,11 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin_model extends CI_Model {
-
-  	var $table = 'm_admin';
-	var $column_order = array('first_name','last_name','email','username',null); //set column field database for datatable orderable
-	var $column_search = array('first_name','last_name','username'); //set column field database for datatable searchable just firstname , lastname , address are searchable
-	var $order = array('m_admin.id' => 'desc'); // default order 
+class Laporan_model extends CI_Model {
+  var $table = 't_laporan';
+	var $column_order = array('id_user','id_layanan', 'keterangan', 'created', 'modified'); //set column field database for datatable orderable
+	var $column_search = array('id_user','id_layanan', 'keterangan'); //set column field database for datatable searchable just firstname , lastname , address are searchable
+	var $order = array('t_laporan.id' => 'desc'); // default order 
   
 	public function __construct()
 	{
@@ -15,11 +14,12 @@ class Admin_model extends CI_Model {
 	}
 
 
-  	private function _get_datatables_query()
+  private function _get_datatables_query()
 	{
-		$this->db->select($this->table.'.*,m_role_admin.name as role');
+		$this->db->select($this->table.'.*,m_user.nama as createdby, m_layanan.jenis_barang');
 		$this->db->from($this->table);
-    	$this->db->join('m_role_admin', 'm_role_admin.id = m_admin.id_role_admin', 'left');
+    $this->db->join('m_user', 'm_user.id = t_laporan.id_user', 'left');
+    $this->db->join('m_layanan', 'm_layanan.id = t_laporan.id_layanan', 'left');
 		$i = 0;
 	
 		foreach ($this->column_search as $item) // loop column 
@@ -78,8 +78,11 @@ class Admin_model extends CI_Model {
 
 	public function get_by_id($id)
 	{
+    $this->db->select($this->table.'.*,m_user.nama as createdby, m_layanan.jenis_barang');
 		$this->db->from($this->table);
-		$this->db->where('id',$id);
+    $this->db->join('m_user', 'm_user.id = t_laporan.id_user', 'left');
+    $this->db->join('m_layanan', 'm_layanan.id = t_laporan.id_layanan', 'left');
+		$this->db->where('m_user.id',$id);
 		$query = $this->db->get();
 
 		return $query->row();
@@ -101,9 +104,8 @@ class Admin_model extends CI_Model {
 	{
 		$this->db->where('id', $id);
 		$this->db->delete($this->table);
-	}
-
+  }
 }
 
-/* End of file Admin_model.php */
-/* Location: ./application/models/Admin_model.php */
+/* End of file Laporan_model.php */
+/* Location: ./application/models/Laporan_model.php */

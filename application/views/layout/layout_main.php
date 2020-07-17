@@ -126,7 +126,35 @@
             <i class="fa fa-home" aria-hidden="true"></i> <span>Dashboard</span>
           </a>
         </li>
+
+        <!-- Laporan -->
         <li class="treeview">
+          <a href="<?=base_url('Laporan')?>">
+            <i class="fa fa-list" aria-hidden="true"></i> <span>Laporan</span>
+          </a>
+        </li>
+        
+        <!-- Layanan -->
+        <li class="treeview">
+          <a href="<?=base_url('Layanan')?>">
+            <i class="fa fa-list" aria-hidden="true"></i> <span>Layanan</span>
+          </a>
+        </li>
+
+        <!-- Admin -->
+        <li class="treeview">
+          <a href="<?=base_url('User')?>">
+            <i class="fa fa-users" aria-hidden="true"></i> <span>User</span>
+          </a>
+        </li>
+
+        <!-- Admin -->
+        <li class="treeview">
+          <a href="<?=base_url('Admin')?>">
+            <i class="fa fa-users" aria-hidden="true"></i> <span>Admin</span>
+          </a>
+        </li>
+        <!-- <li class="treeview">
           <a href="#">
             <i class="fa fa-users" aria-hidden="true"></i> <span>Admin</span>
             <span class="pull-right-container">
@@ -134,10 +162,9 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li class="<?php if($this->uri->uri_string() == 'Role Admin') { echo 'active'; } ?>"><a href="<?=base_url('AdminRole')?>"><i class="fa fa-circle-o"></i> Role Admin</a></li>
             <li class="<?php if($this->uri->uri_string() == 'Admin') { echo 'active'; } ?>"><a href="<?=base_url('Admin')?>"><i class="fa fa-circle-o"></i> <span> Admin</span></a></li>
           </ul>
-        </li>
+        </li> -->
         
 
       </ul>
