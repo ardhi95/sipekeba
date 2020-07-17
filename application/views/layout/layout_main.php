@@ -143,7 +143,7 @@
 
         <!-- Admin -->
         <li class="treeview">
-          <a href="<?=base_url('User')?>">
+          <a href="<?=base_url('Users')?>">
             <i class="fa fa-users" aria-hidden="true"></i> <span>User</span>
           </a>
         </li>
